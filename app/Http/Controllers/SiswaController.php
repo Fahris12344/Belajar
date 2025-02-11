@@ -30,7 +30,7 @@ class SiswaController extends Controller
         return redirect()->route('siswa.index')->with('success', 'Data siswa berhasil ditambahkan!');
     }
     public function destroy($id){
-        $siswas =Student::findOrFail($id);
+        $siswas = Student::findOrFail($id);
         $siswas ->delete();
         return redirect()->route('siswa.index') ->with('success','Data berhasil di hapus');
     }
